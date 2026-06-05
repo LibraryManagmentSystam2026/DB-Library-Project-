@@ -1,0 +1,5 @@
+CREATE TABLE Member (
+  MemberID INT PRIMARY KEY ,
+  Name VARCHAR(100),
+  Email VARCHAR (100)
+  );
