@@ -50,3 +50,11 @@ CREATE TABLE Loan (
     FOREIGN KEY (BookID) REFERENCES Book(BookID),
     FOREIGN KEY (LibrarianID) REFERENCES Librarian(LibrarianID)
 );
+
+CREATE TABLE LoanAudit (
+    AuditID INT AUTO_INCREMENT PRIMARY KEY,
+    MemberID INT,
+    BookID INT,
+    ActionDate DATETIME,
+    ActionType VARCHAR(50)
+);
