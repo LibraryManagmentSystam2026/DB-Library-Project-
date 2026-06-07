@@ -1,7 +1,15 @@
+-- =========================
+-- DATABASE + TABLES ONLY
+-- =========================
+
+DROP DATABASE IF EXISTS LibraryDB;
+CREATE DATABASE LibraryDB;
+USE LibraryDB;
+
 CREATE TABLE Member (
     MemberID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
-    Email VARCHAR(100) UNIQUE,
+    Email VARCHAR(100) UNIQUE NOT NULL,
     Phone VARCHAR(20)
 );
 
@@ -17,6 +25,8 @@ CREATE TABLE Book (
     PublishYear INT,
     CategoryID INT,
     FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE Author (
@@ -28,14 +38,14 @@ CREATE TABLE BookAuthor (
     BookID INT,
     AuthorID INT,
     PRIMARY KEY (BookID, AuthorID),
-    FOREIGN KEY (BookID) REFERENCES Book(BookID),
-    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)
+    FOREIGN KEY (BookID) REFERENCES Book(BookID) ON DELETE CASCADE,
+    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID) ON DELETE CASCADE
 );
 
 CREATE TABLE Librarian (
     LibrarianID INT PRIMARY KEY,
-    Name VARCHAR(100),
-    Email VARCHAR(100) UNIQUE
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL
 );
 
 CREATE TABLE Loan (
@@ -46,9 +56,9 @@ CREATE TABLE Loan (
     IssueDate DATE,
     DueDate DATE,
     ReturnDate DATE,
-    FOREIGN KEY (MemberID) REFERENCES Member(MemberID),
-    FOREIGN KEY (BookID) REFERENCES Book(BookID),
-    FOREIGN KEY (LibrarianID) REFERENCES Librarian(LibrarianID)
+    FOREIGN KEY (MemberID) REFERENCES Member(MemberID) ON DELETE CASCADE,
+    FOREIGN KEY (BookID) REFERENCES Book(BookID) ON DELETE CASCADE,
+    FOREIGN KEY (LibrarianID) REFERENCES Librarian(LibrarianID) ON DELETE SET NULL
 );
 
 CREATE TABLE LoanAudit (
