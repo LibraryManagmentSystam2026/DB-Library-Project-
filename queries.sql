@@ -1,25 +1,30 @@
-SELECT 
-    m.Name AS MemberName,
-    b.Title AS BookTitle,
-    l.Name AS LibrarianName,
-    ln.IssueDate,
-    ln.DueDate
-FROM Loan ln
-JOIN Member m ON ln.MemberID = m.MemberID
-JOIN Book b ON ln.BookID = b.BookID
-JOIN Librarian l ON ln.LibrarianID = l.LibrarianID;
+-- =========================
+-- ADVANCED QUERIES
+-- =========================
 
-SELECT 
-    c.CategoryName,
-    COUNT(b.BookID) AS TotalBooks
-FROM Category c
-LEFT JOIN Book b ON c.CategoryID = b.CategoryID
-GROUP BY c.CategoryName;
+USE LibraryDB;
 
+-- JOIN (3 tables)
+SELECT m.Name, b.Title, l.IssueDate
+FROM Loan l
+JOIN Member m ON l.MemberID = m.MemberID
+JOIN Book b ON l.BookID = b.BookID;
+
+-- AGGREGATION
+SELECT MemberID, COUNT(*) AS TotalBooks
+FROM Loan
+GROUP BY MemberID
+HAVING COUNT(*) > 1;
+
+-- SUBQUERY (IN)
 SELECT Title
 FROM Book
-WHERE BookID IN (
-    SELECT BookID
-    FROM Loan
-    WHERE ReturnDate IS NULL
+WHERE BookID IN (SELECT BookID FROM Loan);
+
+-- SUBQUERY (EXISTS)
+SELECT Name
+FROM Member m
+WHERE EXISTS (
+    SELECT 1 FROM Loan l
+    WHERE l.MemberID = m.MemberID
 );
