@@ -8,7 +8,7 @@ INSERT INTO Member VALUES
 (7,'Bilal Khan','bilal@gmail.com','03061234567'),
 (8,'Zainab Ali','zainab@gmail.com','03071234567'),
 (9,'Omar Sheikh','omar@gmail.com','03081234567'),
-(10,'Hira Khan','hira@gmail.com','03091234567');
+(10,'Hira Khan','hira@gmail.com','03091234567'),
 (11,'Salah Noor','Salahnoor45@gmail.com','03051234567'),
 (12,'Jawad Khan','Jawadkhan789@gmail.com','03061234567'),
 (13,'Zaryab Ali','zaryab9090@gmail.com','03071234567'),
