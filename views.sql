@@ -1,12 +1,8 @@
 CREATE VIEW ActiveLoans AS
-SELECT 
-    m.Name AS MemberName, 
-    b.Title, 
-    l.IssueDate, 
-    l.DueDate
+SELECT m.Name, b.Title, l.IssueDate, l.DueDate
 FROM Loan l
-JOIN Member m ON l.MemberID = m.MemberID
-JOIN Book b ON l.BookID = b.BookID;
+JOIN Member m ON m.MemberID = l.MemberID
+JOIN Book b ON b.BookID = l.BookID;
 GO
 
 SELECT * FROM ActiveLoans;
