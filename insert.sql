@@ -15,7 +15,6 @@ INSERT INTO Member VALUES
 (14,'Omar Ali','omar12@gmail.com','03081234567'),
 (15,'Zakia Jamal','Zakiajamal345@gmail.com','03091234567');
 
-
 INSERT INTO Category VALUES
 (1,'Science'),
 (2,'Mathematics'),
@@ -26,7 +25,12 @@ INSERT INTO Category VALUES
 (7,'Chemistry'),
 (8,'Biology'),
 (9,'Philosophy'),
-(10,'Technology');
+(10,'Technology'),
+(11,'Economics'),
+(12,'Psychology'),
+(13,'Geography'),
+(14,'Political Science'),
+(15,'Sociology');
 
 INSERT INTO Book VALUES
 (1,'Data Structures','ISBN001',2020,3),
@@ -38,7 +42,12 @@ INSERT INTO Book VALUES
 (7,'Biology Intro','ISBN007',2022,8),
 (8,'Calculus','ISBN008',2020,2),
 (9,'AI Fundamentals','ISBN009',2023,10),
-(10,'Philosophy 101','ISBN010',2015,9);
+(10,'Philosophy 101','ISBN010',2015,9),
+(11,'Microeconomics','ISBN011',2021,11),
+(12,'Cognitive Psychology','ISBN012',2022,12),
+(13,'Human Geography','ISBN013',2019,13),
+(14,'Political Systems','ISBN014',2020,14),
+(15,'Introduction to Sociology','ISBN015',2023,15);
 
 INSERT INTO Author VALUES
 (1,'John Smith'),
@@ -50,7 +59,12 @@ INSERT INTO Author VALUES
 (7,'Linda Taylor'),
 (8,'James Anderson'),
 (9,'Patricia Thomas'),
-(10,'Daniel White');
+(10,'Daniel White'),
+(11,'Jennifer Moore'),
+(12,'Christopher Martin'),
+(13,'Jessica Garcia'),
+(14,'Matthew Rodriguez'),
+(15,'Elizabeth Martinez');
 
 INSERT INTO BookAuthor VALUES
 (1,1),
@@ -62,7 +76,12 @@ INSERT INTO BookAuthor VALUES
 (7,7),
 (8,8),
 (9,9),
-(10,10);
+(10,10),
+(11,11),
+(12,12),
+(13,13),
+(14,14),
+(15,15);
 
 INSERT INTO Librarian VALUES
 (1,'Ali Raza','ali.raza@lib.com'),
@@ -74,7 +93,12 @@ INSERT INTO Librarian VALUES
 (7,'Bilal Ahmed','bilal.ahmed@lib.com'),
 (8,'Zain Malik','zain.malik@lib.com'),
 (9,'Omar Farooq','omar.farooq@lib.com'),
-(10,'Hira Aslam','hira.aslam@lib.com');
+(10,'Hira Aslam','hira.aslam@lib.com'),
+(11,'Ahmed Rauf','ahmed.rauf@lib.com'),
+(12,'Maryam Siddiqui','maryam.siddiqui@lib.com'),
+(13,'Hamza Sheikh','hamza.sheikh@lib.com'),
+(14,'Iqra Javed','iqra.javed@lib.com'),
+(15,'Tariq Mahmood','tariq.mahmood@lib.com');
 
 INSERT INTO Loan VALUES
 (1,1,1,1,'2026-01-01','2026-01-10','2026-01-09'),
@@ -86,7 +110,12 @@ INSERT INTO Loan VALUES
 (7,7,7,7,'2026-01-07','2026-01-16','2026-01-15'),
 (8,8,8,8,'2026-01-08','2026-01-17','2026-01-16'),
 (9,9,9,9,'2026-01-09','2026-01-18','2026-01-17'),
-(10,10,10,10,'2026-01-10','2026-01-19','2026-01-18');
+(10,10,10,10,'2026-01-10','2026-01-19','2026-01-18'),
+(11,11,11,11,'2026-01-11','2026-01-20','2026-01-19'),
+(12,12,12,12,'2026-01-12','2026-01-21','2026-01-20'),
+(13,13,13,13,'2026-01-13','2026-01-22','2026-01-21'),
+(14,14,14,14,'2026-01-14','2026-01-23','2026-01-22'),
+(15,15,15,15,'2026-01-15','2026-01-24','2026-01-23');
 
 INSERT INTO LoanAudit (MemberID, BookID, ActionDate, ActionType) VALUES
 (1,1,'2026-01-01 10:00:00','ISSUE'),
@@ -98,4 +127,11 @@ INSERT INTO LoanAudit (MemberID, BookID, ActionDate, ActionType) VALUES
 (7,7,'2026-01-07 10:00:00','ISSUE'),
 (8,8,'2026-01-08 10:00:00','ISSUE'),
 (9,9,'2026-01-09 10:00:00','ISSUE'),
-(10,10,'2026-01-10 10:00:00','ISSUE');
+(10,10,'2026-01-10 10:00:00','ISSUE'),
+(11,11,'2026-01-11 10:00:00','ISSUE'),
+(12,12,'2026-01-12 10:00:00','ISSUE'),
+(13,13,'2026-01-13 10:00:00','ISSUE'),
+(14,14,'2026-01-14 10:00:00','ISSUE'),
+(15,15,'2026-01-15 10:00:00','ISSUE');
+
+
