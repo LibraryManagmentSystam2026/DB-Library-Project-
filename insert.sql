@@ -1,3 +1,4 @@
+--INSERTING VALUES TO TABLES 
 INSERT INTO Member VALUES
 (1,'Noshin Rabani','noshin63@gmail.com','03001234567'),
 (2,'Pariwash Wared','Pariwared64@gmail.com','03011234567'),
