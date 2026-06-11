@@ -1,3 +1,4 @@
+--VIEW 1
 CREATE VIEW ActiveLoans AS
 SELECT m.Name, b.Title, l.IssueDate, l.DueDate
 FROM Loan l
