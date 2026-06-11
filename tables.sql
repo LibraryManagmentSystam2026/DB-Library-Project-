@@ -1,15 +1,6 @@
 -- =========================
 -- DATABASE + TABLES ONLY
 -- =========================
-USE master;
-GO
-
-IF DB_ID('LibraryDB') IS NOT NULL
-BEGIN
-    ALTER DATABASE LibraryDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    DROP DATABASE LibraryDB;
-END
-GO
 
 -- Create database
 CREATE DATABASE LibraryDB;
