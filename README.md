@@ -27,9 +27,8 @@ This is a Database Management System (DBMS) project for managing a library syste
 - triggers.sql → Triggers
 
 ## Tools Used
-- MySQL
 - GitHub
 - SQL
 
 ## Author
-Student Project
+Nutech Student Project
